@@ -27,6 +27,10 @@ const typeDefs = gql`
 `;
 
 const resolvers = {
+  Query: {
+    users: (): Omit<User, 'password'>[] =>
+      UsersData.map(({ password, ...user }) => user),
+  },
   Mutation: {
     login: (_: unknown, { email, password }: { email: string; password: string }): LoginResponse => {
       const user = UsersData.find((u) => u.email === email && u.password === password);
