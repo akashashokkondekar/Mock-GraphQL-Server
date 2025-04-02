@@ -1,6 +1,6 @@
 import { ApolloServer, AuthenticationError, gql } from 'apollo-server';
 import { IncorrectUsernamePasswordMsg, UserList } from './../Utils/AppConstant';
-import { LoginResponse } from '../types/Interfaces';
+import { LoginResponse, User } from '../types/Interfaces';
 import { AppUtils } from './../Utils/AppUtils';
 
 // Overall Schema
@@ -29,7 +29,7 @@ const typeDefs = gql`
 const resolvers = {
   Query: {
     users: (): Omit<User, 'password'>[] =>
-      UsersData.map(({ password, ...user }) => user),
+      UserList.map(({ password, ...user }) => user),
   },
   Mutation: {
     login: (_: any, { email, password }: { email: string; password: string }): LoginResponse => {
