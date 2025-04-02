@@ -1,5 +1,5 @@
 import { ApolloServer, AuthenticationError, gql } from 'apollo-server';
-import { IncorrectUsernamePasswordMsg, UserList } from './../Utils/AppConstant';
+import { IncorrectUsernamePasswordMsg, InternalServerErrorMsg, UnAuthenticatedErrorCode, UserList } from './../Utils/AppConstant';
 import { LoginResponse } from '../types/Interfaces';
 import { AppUtils } from './../Utils/AppUtils';
 
@@ -51,7 +51,7 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   formatError: (err) => {
-    if (err.extensions?.code === 'UNAUTHENTICATED') {
+    if (err.extensions?.code === UnAuthenticatedErrorCode) {
       return {
         message: err.message,
         extensions: {
@@ -63,7 +63,7 @@ const server = new ApolloServer({
     return {
       message: err.message,
       extensions: {
-        code: err.extensions?.code || 'INTERNAL_SERVER_ERROR',
+        code: err.extensions?.code || InternalServerErrorMsg,
       },
     };
   },

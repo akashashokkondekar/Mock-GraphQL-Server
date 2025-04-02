@@ -6,3 +6,5 @@ export const UserList = [
 ];
 
 export const IncorrectUsernamePasswordMsg = 'Invalid email or password';
+export const UnAuthenticatedErrorCode = 'UNAUTHENTICATED';
+export const InternalServerErrorMsg = 'INTERNAL_SERVER_ERROR';
