@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node src/server.ts",
-    "dev": "nodemon src/server.ts"
-   },
+    "dev": "nodemon src/server.ts",
+    "build": "tsup src/server.ts --format cjs"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -17,6 +18,7 @@
     "graphql": "^16.10.0",
     "nodemon": "^3.1.9",
     "ts-node": "^10.9.2",
+    "tsup": "^8.4.0",
     "typescript": "^5.8.2"
   }
 }
