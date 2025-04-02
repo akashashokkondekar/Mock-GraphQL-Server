@@ -1,5 +1,5 @@
 import { ApolloServer, AuthenticationError, gql } from 'apollo-server';
-import { IncorrectUsernamePasswordMsg, InternalServerErrorMsg, UnAuthenticatedErrorCode, UserList } from './../Utils/AppConstant';
+import { IncorrectCredentialsErrorMsg, InternalServerErrorMsg, UnAuthenticatedErrorCode, UserList } from './../Utils/AppConstant';
 import { LoginResponse, User } from '../types/Interfaces';
 import { AppUtils } from './../Utils/AppUtils';
 
@@ -35,7 +35,7 @@ const resolvers = {
     login: (_: any, { email, password }: { email: string; password: string }): LoginResponse => {
       const user = UserList.find((u) => u.email === email && u.password === password);
       if (!user) {
-        throw new AuthenticationError(IncorrectUsernamePasswordMsg);
+        throw new AuthenticationError(IncorrectCredentialsErrorMsg);
       }
       return { 
         token: AppUtils.GenerateRandomGUID(), 
