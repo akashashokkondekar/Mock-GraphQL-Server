@@ -335,7 +335,7 @@ export const UserList = [
     name: 'Lindsy',
     email: 'lmattiato1f@smugmug.com',
     password: 'lG23Q',
-    role: UserRoleEnum.User
+    role: UserRoleEnum.None
   }, {
     id: 'b4786069-a2a6-4983-87bc-f550433487a4',
     name: 'Noelyn',
@@ -347,7 +347,7 @@ export const UserList = [
     name: 'Denys',
     email: 'ddinley1h@blogtalkradio.com',
     password: 'oA1*F',
-    role: UserRoleEnum.Admin
+    role: UserRoleEnum.None
   }, {
     id: '4634c9c1-afe7-46d4-adc4-4fc73b0c11b5',
     name: 'Mead',
@@ -413,7 +413,7 @@ export const UserList = [
     name: 'Averill',
     email: 'apalmer1s@simplemachines.org',
     password: 'nU9+?a',
-    role: UserRoleEnum.User
+    role: UserRoleEnum.None
   }, {
     id: '0a67fc67-5e44-4cfd-97c4-65fbdd9fd5fc',
     name: 'Carlita',
@@ -605,7 +605,7 @@ export const UserList = [
     name: 'Audrey',
     email: 'acordle2o@topsy.com',
     password: 'dR2`lJj',
-    role: UserRoleEnum.Admin
+    role: UserRoleEnum.None
   }, {
     id: '1927cc7e-d055-49b3-8344-41beab9fb178',
     name: 'Lenna',
