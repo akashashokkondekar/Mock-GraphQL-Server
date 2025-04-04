@@ -14,14 +14,14 @@ export const UserList = [
     id: '7b567233-5ebb-429c-afa1-777e1f9c6eb8',
     name: 'Akash Kondekar',
     email: 'akash@gmail.com',
-    password: 'admin',
+    password: 'A!s2D%',
     role: UserRoleEnum.Admin
   },
   {
     id: '12c5f2343-8484-4800-9b09-b4fci127dfe',
     name: 'James Snell',
     email: 'james.snell@itccompliance.co.uk',
-    password: 'user',
+    password: 'j*4QA9',
     role: UserRoleEnum.Admin
   },
   {
